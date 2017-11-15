@@ -1,0 +1,16 @@
+{
+"name": "com.phonegap.plugins.PushPlugin",
+  "version": "2.5.0",
+  "description": "This plugin allows your application to receive push notifications on Android, iOS, WP8 and Windows8 devices.",
+  "cordova": {
+    "id": "com.phonegap.plugins.PushPlugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UniwareSystems/PushPlugin"
+  }
+ }
