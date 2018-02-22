@@ -4,7 +4,7 @@
     xmlns:amazon="http://schemas.android.com/apk/lib/com.amazon.device.ads"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     id="com.phonegap.plugins.PushPlugin"
-    version="2.5.0">
+    version="2.5.1">
 
   <name>PushPlugin</name>
 	<author>Bob Easterday</author>
@@ -31,13 +31,13 @@
 	<platform name="android">
         <framework src="com.android.support:support-v4:+" />
 
-		<config-file target="res/xml/config.xml" parent="/*">
+		<config-file target="config.xml" parent="/*">
 			<feature name="PushPlugin" >
 				<param name="android-package" value="com.plugin.gcm.PushPlugin"/>
 			</feature>
 		</config-file>
 
-		<config-file target="AndroidManifest.xml" parent="/manifest">
+		<config-file target="app/src/main/AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 			<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 			<uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -47,7 +47,7 @@
 			<uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE" />
 		</config-file>
 
-		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+		<config-file target="app/src/main/AndroidManifest.xml" parent="/manifest/application">
 			<activity android:name="com.plugin.gcm.PushHandlerActivity" android:exported="true"/>
 			<receiver android:name="com.plugin.gcm.CordovaGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
 				<intent-filter>
